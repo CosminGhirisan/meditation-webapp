@@ -5,6 +5,7 @@
 }
 .app {
   height: 100vh;
+  width: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -24,6 +25,11 @@
 
 .player-container {
   position: relative;
+  width: 50%;
+  height: auto;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  background: rgba(223, 226, 176, 0.4);
 }
 
 .player-container svg {
@@ -55,9 +61,8 @@ video {
   position: fixed;
   top: 0;
   left: 0;
-
   height: 100%;
-  width: 177.77777778vh; /* 100 * 16 / 9 */
+  width: auto;
   min-width: 100%;
   min-height: 56.25vw; /* 100 * 9 / 16 */
   z-index: -10;
@@ -68,18 +73,19 @@ video {
   height: auto;
   font-size: 20px;
   color: #fff;
-  background: none;
+  background: rgba(223, 226, 176, 0.4);
+
   padding: 2px;
   margin: 5px;
   cursor: pointer;
-  border: 2px solid #fff;
+  border: 2px solid #ffffff;
   border-radius: 5px;
   transition: all 0.5s ease;
 }
 
 .time-select button:hover {
-  color: #000;
-  background-color: #fff;
+  color: rgb(41, 92, 151);
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .sound-picker button {
@@ -102,6 +108,12 @@ video {
 
 .sound-picker button img {
   height: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  .player-container {
+    width: 20%;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
